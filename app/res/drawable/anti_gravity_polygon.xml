@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Irregular soft appearance using large uniform corner radius for now -->
+    <corners android:radius="32dp" />
+    <solid android:color="#202A36" /> <!-- Deep charcoal/blue -->
+    <!-- Cyan glow outline -->
+    <stroke android:width="2dp" android:color="#00E5FF" />
+</shape>

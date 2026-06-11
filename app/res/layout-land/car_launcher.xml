@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/premium_bg_gradient">
+
+    <!-- The System Window Orchestrator will draw TaskPanels over this view! -->
+    <!-- We only need to define the static Decor content here (e.g., the Left 30% Telemetry) -->
+
+    <!-- Left 30% Guideline -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <!-- Left Zone (30%): Telemetry Container -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guide_left">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/glass_panel"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MODEL S-16"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:letterSpacing="0.1"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="32dp"/>
+
+            <FrameLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/speedometer_ring">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="68"
+                    android:textColor="#FFFFFF"
+                    android:textSize="56sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="40dp"
+                    android:text="km/h"
+                    android:textColor="#AAAAAA"
+                    android:textSize="16sp"/>
+            </FrameLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:alignmentMode="alignBounds">
+
+                <!-- Battery -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/glass_panel"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView android:text="BATTERY" android:textColor="#888" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="GOOD" android:textColor="#FFF" android:textSize="18sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!-- Tire Pressure -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/glass_panel"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView android:text="TIRE PRESS" android:textColor="#888" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="95%" android:textColor="#FFF" android:textSize="18sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </GridLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

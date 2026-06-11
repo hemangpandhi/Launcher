@@ -1,0 +1,63 @@
+<!--
+  ~ Copyright (C) 2025 The Android Open Source Project Inc.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.car.carlauncher"
+    coreApp="true">
+
+    <!-- Permission to get car driving state -->
+    <uses-permission android:name="android.car.permission.CAR_DRIVING_STATE"/>
+
+    <!-- Permission to manage USB -->
+    <uses-permission android:name="android.permission.MANAGE_USB"/>
+
+    <!-- Permissions to support display compat -->
+    <uses-permission android:name="android.car.permission.MANAGE_DISPLAY_COMPATIBILITY"/>
+
+    <application
+        android:label="Declarative Windowing definition Car Launcher"
+        android:theme="@style/DewdCarLauncherTheme"
+        tools:replace="android:label,android:theme"
+        tools:node="merge">
+        <uses-library android:name="com.android.oem.tokens" android:required="false"/>
+
+        <activity
+            android:name=".DewdHome"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true">
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.LAUNCHER_APP"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.android.car.carlauncher.CarLauncher"
+            android:exported="false"
+            tools:node="merge"
+            tools:replace="android:exported">
+            <!-- Disable the CarLauncher activity as we don't want that in the
+                 custom launcher. -->
+            <intent-filter tools:node="removeAll"/>
+        </activity>
+    </application>
+</manifest>
