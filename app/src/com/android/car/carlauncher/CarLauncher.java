@@ -172,11 +172,11 @@ public class CarLauncher extends FragmentActivity {
                 getWindow().addPrivateFlags(PRIVATE_FLAG_TRUSTED_OVERLAY);
                 // To pass touches to the underneath task.
                 getWindow().addFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
-                // We don't want to show Map card unnecessarily for the headless user 0
                 if (!UserHelperLite.isHeadlessSystemUser(getUserId())) {
                     mMapsCard = findViewById(R.id.maps_card);
                     if (mMapsCard != null) {
-                        setupRemoteCarTaskView(mMapsCard);
+                        // Stub Launcher: Let SystemWindowOrchestrator manage the Maps App
+                        // setupRemoteCarTaskView(mMapsCard);
                     }
                 }
             } else {
