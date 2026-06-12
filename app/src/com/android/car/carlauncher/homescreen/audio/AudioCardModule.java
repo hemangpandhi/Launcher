@@ -51,7 +51,7 @@ public class AudioCardModule implements HomeCardModule {
 
     @Override
     public int getCardResId() {
-        return R.id.top_card;
+        return R.id.bottom_card;
     }
 
     @Override

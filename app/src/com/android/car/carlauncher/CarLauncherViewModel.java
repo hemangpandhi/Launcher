@@ -206,11 +206,11 @@ public final class CarLauncherViewModel extends ViewModel implements DefaultLife
                 Log.d(TAG, "MapsTaskView: onTaskVanished: taskId=" + taskInfo.taskId);
             }
             if (!sAutoRestartOnCrash) {
-                // RemoteCarTaskView color is set to red to indicate
+                // RemoteCarTaskView color is set to transparent to indicate
                 // that nothing is wrong with the task view but maps
                 // in the task view has crashed. More details in
                 // b/247156851.
-                mRemoteCarTaskView.getValue().setBackgroundColor(Color.RED);
+                mRemoteCarTaskView.getValue().setBackgroundColor(Color.TRANSPARENT);
             }
         }
     }

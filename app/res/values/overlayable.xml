@@ -183,6 +183,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="recent_clear_all_button_background"/>
       <item type="drawable" name="recent_dismiss_button_background"/>
       <item type="id" name="album_art"/>
+      <item type="id" name="bottom_card"/>
+      <item type="id" name="bottom_edge"/>
+      <item type="id" name="bottom_line"/>
       <item type="id" name="button_center"/>
       <item type="id" name="button_left"/>
       <item type="id" name="button_panel_background"/>
@@ -203,6 +206,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="divider_horizontal"/>
       <item type="id" name="empty_panel"/>
       <item type="id" name="empty_state"/>
+      <item type="id" name="end_edge"/>
       <item type="id" name="fragment_container_view"/>
       <item type="id" name="guideline"/>
       <item type="id" name="header_app_icon"/>
@@ -220,6 +224,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="history_list"/>
       <item type="id" name="history_list_container"/>
       <item type="id" name="in_call_fragment_container"/>
+      <item type="id" name="maps_card"/>
       <item type="id" name="media_card_panel_content_container"/>
       <item type="id" name="media_card_panel_handlebar"/>
       <item type="id" name="media_card_queue_header_title_view"/>
@@ -265,6 +270,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="recents_clear_all_button"/>
       <item type="id" name="review_button"/>
       <item type="id" name="secondary_text"/>
+      <item type="id" name="start_edge"/>
       <item type="id" name="subtitle"/>
       <item type="id" name="tap_for_more_text"/>
       <item type="id" name="task_dismiss_button"/>
@@ -276,6 +282,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="text_block_layout"/>
       <item type="id" name="thumbnail"/>
       <item type="id" name="title"/>
+      <item type="id" name="top_card"/>
+      <item type="id" name="top_edge"/>
+      <item type="id" name="top_line"/>
+      <item type="id" name="vertical_barrier"/>
       <item type="id" name="view_pager"/>
       <item type="integer" name="calm_mode_activity_fade_duration"/>
       <item type="integer" name="calm_mode_content_fade_duration"/>

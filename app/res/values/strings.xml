@@ -15,7 +15,7 @@
     limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_title">AOSP Stack OS</string>
+    <string name="app_title">Car Launcher</string>
 
     <string name="default_media_song_title"></string>
 
